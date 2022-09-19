@@ -148,4 +148,3 @@ checkWinner(scoreDolphins, scoreKoalas);
 */
 
 // Arrays
-
