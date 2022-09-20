@@ -148,6 +148,7 @@ checkWinner(scoreDolphins, scoreKoalas);
 */
 
 // Arrays
+/*
 const friend1 = 'Micheal';
 const friend2 = 'John';
 const friend3 = 'Julius';
@@ -182,3 +183,14 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
+*/
+
+// Basic Array Operations (Methods)
+
+// Push Method
+const friends = ['Micheal', 'John', 'Julius'];
+friends.push('Kelvin');
+console.log(friends);
+//const newLenght = friends.push('Jay'); // this is used to calculate the new lenght of a push function..
+
+// Unshift Method 
