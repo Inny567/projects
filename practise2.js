@@ -187,10 +187,39 @@ console.log(ages);
 
 // Basic Array Operations (Methods)
 
-// Push Method
+/*
+// Push Method (ADDS elements at the END of an Array)
 const friends = ['Micheal', 'John', 'Julius'];
-friends.push('Kelvin');
+const newLenght = friends.push('Jay'); // this is used to calculate the new lenght of a push function..
 console.log(friends);
-//const newLenght = friends.push('Jay'); // this is used to calculate the new lenght of a push function..
+console.log(newLenght);
 
-// Unshift Method 
+// Unshift Method (ADDS element at the BEGINNING of the Array)
+friends.unshift('James');
+console.log(friends);
+
+// Pop Method (Pop method REMOVE the LAST element of an Array)
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+// Shift Method (Shift Method REMOVE the element that BEGINS an Array)
+friends.shift();
+console.log(friends);
+
+// indexOf Method (this tells the position of an element in an array)
+console.log(friends.indexOf('John'));
+console.log(friends.indexOf('Bob'));
+
+// includes Method ( this tells whether an element is present in an array by TRUE/FALSE value)
+friends.push(23);
+console.log(friends.includes('John'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes('23'));
+console.log(friends.includes(23));
+
+if (friends.includes('John')) {
+    console.log('you have a friend called John 🥰');
+} */
+
