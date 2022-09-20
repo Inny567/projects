@@ -148,3 +148,9 @@ checkWinner(scoreDolphins, scoreKoalas);
 */
 
 // Arrays
+const friend1 = 'Micheal';
+const friend2 = 'John';
+const friend3 = 'Julius';
+
+const friends = ['Micheal', 'John', 'Julius'];
+console.log(friends);
