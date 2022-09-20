@@ -154,3 +154,8 @@ const friend3 = 'Julius';
 
 const friends = ['Micheal', 'John', 'Julius'];
 console.log(friends);
+
+const years = new Array(1991, 1992, 1993, 1994, 1995);
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]);
