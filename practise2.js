@@ -308,3 +308,34 @@ console.log(jonas);
 // "jonas has 3 friends, and his best friend is called micheal"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his bestfriend is called ${jonas.friends[0]}`)
 */
+
+// OBJECT METHODS
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'King',
+    birthYear: 1991,
+    job: 'developer',
+    friends: ['Micheal', 'Peter', 'Steven'],
+    hasDriversLincense: true,
+
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    calcAge: function () {
+        // console.log(this);
+        return 2037 - this.birthYear;
+    },
+
+    getSummary: function () {
+        return `${jonas.firstName} is a ${jonas.calcAge()}-years old ${jonas.job}, and he has ${this.hasDriversLincense ? 'a' : 'no'} driver's license.`
+    }
+};
+
+console.log(jonas.calcAge());
+console.log(jonas.calcAge());
+console.log(jonas.calcAge());
+console.log(jonas.calcAge());
+// console.log(jonas['calcAge'](1991));
+
+console.log(jonas.getSummary());
