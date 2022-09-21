@@ -239,9 +239,70 @@ HINT: Remember that an array needs a value in each position, and that value can 
 
 GOOD LUCK 😀
 */
-let bill = 100;
-const calcTip = bill >= 300 && bill <= 50 ? bill * 0.15 : bill * 0.20;
-console.log(calcTip);
+
+/*
+const calcTip = function (bill) {
+    return bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
+}
+const bill = 100;
+console.log(calcTip(bill));
 const bills = [125, 555, 44];
-const tips = [];
-console.log(tips);
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tips);
+
+const totals = [bills[0] + (calcTip(bills[0])), bills[1] + (calcTip(bills[1])), bills[2] + (calcTip(bills[2]))];
+console.log(totals);
+
+const totals1 = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(totals1); */
+
+// Introduction to OBJECTS
+// const jonasArray = [
+//     'Jonas',
+//     'King',
+//     2037 - 1991,
+//     'developer'
+//     ['Micheal', 'Peter', 'Steven']
+// ];
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'King',
+//     age: 2037 - 1991,
+//     job: 'developer',
+//     feirnds: ['Micheal', 'Peter', 'Steven']
+// };
+
+
+// DOT and BRACKET Notation
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'King',
+    age: 2037 - 1991,
+    job: 'developer',
+    friends: ['Micheal', 'Peter', 'Steven']
+};
+console.log(jonas);
+console.log(jonas.lastName); // using DOT Notation
+console.log(jonas['lastName']); // using BRACKET notation
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interestedIn = prompt('what do you want to know about jonas? choose between firstName, lastName, job, age, and friends');
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('wrong request! choose between firstName, lastName, job, age, and friends');
+}
+
+// using DOT and BRACKET otation to add a property to an object.
+jonas.location = 'Portugal';
+jonas['twitter'] = '@emmyvandross567';
+console.log(jonas);
+
+// Challenge
+// "jonas has 3 friends, and his best friend is called micheal"
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his bestfriend is called ${jonas.friends[0]}`)
