@@ -275,6 +275,7 @@ console.log(totals1); */
 
 
 // DOT and BRACKET Notation
+/*
 const jonas = {
     firstName: 'Jonas',
     lastName: 'King',
@@ -306,3 +307,4 @@ console.log(jonas);
 // Challenge
 // "jonas has 3 friends, and his best friend is called micheal"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his bestfriend is called ${jonas.friends[0]}`)
+*/
