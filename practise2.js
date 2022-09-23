@@ -460,3 +460,20 @@ for (let i = 0; i < jonas.length; i++) {
 }*/
 
 
+// Looping Backwards and Loops in Loops
+// LOOPING BACKWARDS
+const jonas = [
+    'Jonas',
+    'King',
+    2037 - 1991,
+    'developer',
+    ['Micheal', 'Peter', 'Steven']
+];
+// 0, 1, ..., 4  (looping forward)
+// 4, 3, ..., 0  (looping backwards)
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]); // the i is to check the descending orders. i is the counter variable.
+}
+
+// LOOPS inside LOOPS
