@@ -261,7 +261,7 @@ console.log(totals1); */
 //     'Jonas',
 //     'King',
 //     2037 - 1991,
-//     'developer'
+//     'developer',
 //     ['Micheal', 'Peter', 'Steven']
 // ];
 
@@ -414,9 +414,10 @@ const jonas = [
     'King',
     2037 - 1991,
     'developer',
-    ['Micheal', 'Peter', 'Steven']
+    ['Micheal', 'Peter', 'Steven'],
+    true
 ];
-
+const types = [];
 // console.log(jonas[0]);
 // console.log(jonas[1]);
 // console.log(jonas[2]);
@@ -424,6 +425,19 @@ const jonas = [
 // console.log(jonas[4]);
 
 for (let i = 0; i < jonas.length; i++) {
-    console.log(jonas[i]);
-}
+    //reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
 
+    //filling types array
+    // types[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
