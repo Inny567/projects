@@ -413,9 +413,15 @@ const jonas = [
     'Jonas',
     'King',
     2037 - 1991,
-    'developer'
+    'developer',
     ['Micheal', 'Peter', 'Steven']
 ];
+
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// console.log(jonas[2]);
+// console.log(jonas[3]);
+// console.log(jonas[4]);
 
 for (let i = 0; i < jonas.length; i++) {
     console.log(jonas[i]);
