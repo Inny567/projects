@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 //scoping in practise
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
@@ -39,3 +40,47 @@ const firstName = 'Jonas';
 calcAge(1991);
 // console.log(age); this wil gives eror bacause is not accessible in  the global scope.
 // printAge(); thi will also gives error bacause its not accesible in the global scope
+*/
+
+// Hoisting in practice
+
+//hoisting with variables
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = 'Jonas';
+let job = 'teacher';
+const year = 1991;
+
+// hoisting with functions
+console.log(addDecl(2, 3));
+console.log(addArrow);
+// console.log(addExpr(2, 3));
+// console.log(addArrow(2, 3));
+function addDecl(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+var addArrow = (a, b) => a + b;
+
+// Example
+if (!numProduct) deleteShoppingCart();
+
+var numProduct = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted!');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x); // here we are testing if x is a property of window object.
+console.log(y === window.y);
+console.log(z === window.z);
