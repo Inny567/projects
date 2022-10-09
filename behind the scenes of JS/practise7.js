@@ -121,3 +121,78 @@ maltilda.calcAge(); // in this method call here the this keyword does not actual
 const f = jonas.calcAge;
 f(); // this will gives UNDEFINED as the result because the function here is now just a regular function call. its not attached to any object
 */
+
+/*
+// how to use and avoid regular and arrow functions
+//var firstName = 'matilda';// never use 'var' to declare variables
+
+// const jonas = {
+//   firstName: 'Jonas',
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+
+//   greet: function () {
+//     console.log(this);
+//     console.log(`Hey ${this.firstName}`);
+//   },
+// };
+// never use arrow function as a method
+// the solution to that is to use either 'self' or 'that' keyword on line 153
+
+// jonas.greet();
+
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2037 - this.year);
+
+    // worked problem
+    // const isMillenial = function () {
+    //   console.log(this);
+    //   console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+
+    // solution 1 ( use 'self' or 'that')
+    // const self = this; // self or that
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    //   //  console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+
+    // solution 2 ( use arrow function )
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    }; // this works because the arrow function inherits the this keyword from its parent scope. here the parent scope is 'jonas object'.
+
+    isMillenial();
+  },
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+jonas.greet();
+jonas.calcAge();
+
+// Arguments keyword ( arguments keyword only exists in regular functions i.e its exist in function expression, function declaration but does not exist in arrow function. )
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5);
+addArrow(2, 5, 8); // this shows that in arrow functions  arguments is not defined.
+*/
