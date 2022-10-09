@@ -42,6 +42,7 @@ calcAge(1991);
 // printAge(); thi will also gives error bacause its not accesible in the global scope
 */
 
+/*
 // Hoisting in practice
 
 //hoisting with variables
@@ -84,3 +85,4 @@ const z = 3;
 console.log(x === window.x); // here we are testing if x is a property of window object.
 console.log(y === window.y);
 console.log(z === window.z);
+*/
