@@ -86,3 +86,38 @@ console.log(x === window.x); // here we are testing if x is a property of window
 console.log(y === window.y);
 console.log(z === window.z);
 */
+
+/*
+// Practise on the this keyword
+console.log(this);
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAge(1991);
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAgeArrow(1980);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+jonas.calcAge();
+
+const maltilda = {
+  year: 2017,
+};
+
+maltilda.calcAge = jonas.calcAge; // this process is called method borrowing.
+maltilda.calcAge(); // in this method call here the this keyword does not actually point to maltilda. this proves that the this keyword always point to the objet calling the method.
+
+const f = jonas.calcAge;
+f(); // this will gives UNDEFINED as the result because the function here is now just a regular function call. its not attached to any object
+*/
