@@ -1,5 +1,6 @@
 'use strict';
 
+//scoping in practise
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
   // console.log(firstName); // this works just fine even though the firstName was declared after the calcAge function. the code in the function only gets executed once it is called. so if the code in the function is called before declaring the firstName this will be an error because this function wil no loger have access to the global scope defined.
