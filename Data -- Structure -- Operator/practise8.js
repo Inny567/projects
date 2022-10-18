@@ -312,6 +312,41 @@ const restaurant = {
   },
 };
 
+// // MAPS Iteration
+// const question = new Map([
+//   ['question', 'What is yhe best programming language in the world'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['correct', 3],
+//   [true, 'Correct 🎉'],
+//   [false, 'Try again'],
+// ]);
+// console.log(question);
+
+// // Converting objects to maps
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+
+// // Quiz app
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
+// const answer = Number(prompt('Your answer'));
+// console.log(answer);
+// // const correct = 3;
+// // question.set(correct, 'Correct 🎉');
+// // if (answer === correct) {
+// //   console.log(question.get(correct));
+// // } else {
+// //   console.log(question.get(false));
+// // }
+// console.log(question.get(question.get('correct') === answer));
+
+// // Converting Map to Array
+// console.log([...question]);
+
 // // MAPS
 // const rest = new Map();
 // rest.set('name', 'Classico Italiano');
