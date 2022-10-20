@@ -312,6 +312,54 @@ const restaurant = {
   },
 };
 
+// // Working With Strings - Part 1
+// const airline = 'TAP Air Portugal';
+// const plane = 'A320';
+
+// // getting POSITION of a STRINGS
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737'[0]);
+
+// // Getting the LENGTH of a STRINGS
+// console.log(airline.length);
+// console.log('B737'.length);
+
+// // getting the INDEX of a STRINGS
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('Portugal'));
+
+// // EXTRACTION of STRINGS
+// // 1. knowing the INDEXES already
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+
+// // 2. NOT knowing the INDEXES
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -1));
+
+// // Examples
+// const checkMiddleSeat = function (seat) {
+//   // B and E are middle seats
+//   const s = seat.slice(-1);
+//   if (s === 'B' || s === 'E') console.log('You got the middle seat 😜');
+//   else console.log('You got lucky 🥰');
+// };
+
+// checkMiddleSeat('11E');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
+
+// console.log(new String('Jonas'));
+// console.log(typeof new String('Jonas'));
+// console.log(new String('Jonas').slice(0));
+// console.log(typeof new String('Jonas').slice(0));
+
 // ///////////////////////////////////////
 // // Coding Challenge #3
 
