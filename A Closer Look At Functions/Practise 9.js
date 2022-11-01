@@ -116,6 +116,7 @@ greeterHey1('Inioluwa');
 greet1('Hi')('Emmy');
 */
 
+/*
 // The Call and Apply Method
 const lufthansa = {
   airline: 'lufthansa',
@@ -165,3 +166,68 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
+
+// The BIND method
+// book.call(lufthansa, 239, 'Mary Faith');
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW(133, 'King Marshal');
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Emmanuel Inioluwa');
+bookEW23('Kelvin James');
+
+// The BIND method with an Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+// lufthansa.buyPlane();
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+// Using the BIND methods on Partial Application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+// addVAT = value => value + value * 0.23;
+
+console.log(addVAT(100));
+
+// challenge
+// const addTax1 = function (value) {
+//   return value + value * 0.1;
+// };
+
+// const addVAT1 = function (value) {
+//   return value + value * 0.23;
+// };
+
+// const method = function (value, fn) {
+//   console.log(`${fn(value)}`);
+//   console.log(`Calculated by : ${fn.name}`);
+// };
+
+// method(100, addTax1);
+// method(200, addVAT1);
+
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(100));
+console.log(addVAT2(23));
+*/
