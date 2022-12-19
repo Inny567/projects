@@ -69,7 +69,7 @@ const displayMovements = function (movements) {
     const html = `  <div class="movements__row">
           <div class="movements__type movements__type--${type}">${
       i + 1
-    }${type}</div>
+    } ${type}</div>
           <div class="movements__value">${mov}</div>
         </div>`;
 
@@ -78,6 +78,19 @@ const displayMovements = function (movements) {
 };
 
 displayMovements(account1.movements);
+
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUsernames(accounts);
+console.log(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
