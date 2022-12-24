@@ -178,6 +178,20 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+  if (amount >= currentAccount.movements.some(mov => mov * 0.1)) {
+    // Add Movements
+    currentAccount.movements.push(amount);
+
+    // Update UI
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = '';
+});
+
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
   if (
@@ -492,3 +506,21 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 //     console.log(acc);
 //   }
 // }
+
+// Equality
+console.log(movements);
+console.log(movements.includes(-130));
+
+// Specifying Condition
+const anyDeposits = movements.some(mov => mov > 0);
+console.log(anyDeposits);
+
+// EVERY Method
+console.log(movements.every(mov => mov > 0));
+console.log(account4.movements.every(mov => mov > 0));
+
+// Seperate Callback
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
