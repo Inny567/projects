@@ -526,11 +526,11 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 // console.log(movements.filter(deposit));
 
 // FLAT METHOD
-const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
-console.log(arr.flat());
+// const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+// console.log(arr.flat());
 
-const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
-console.log(arrDeep.flat(2));
+// const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+// console.log(arrDeep.flat(2));
 
 // const accountMovements = accounts.map(acc => acc.movements);
 // console.log(accountMovements);
