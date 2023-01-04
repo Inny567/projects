@@ -541,20 +541,20 @@ console.log(arrDeep.flat(2));
 // const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
 // console.log(overalBalance);
 
-const overalBalance = accounts
-  .map(acc => acc.movements)
-  .flat()
-  .reduce((acc, mov) => acc + mov, 0);
-console.log(overalBalance);
+// const overalBalance = accounts
+//   .map(acc => acc.movements)
+//   .flat()
+//   .reduce((acc, mov) => acc + mov, 0);
+// console.log(overalBalance);
 
-// FLATMAP Method
-const allMovements2 = accounts.flatMap(acc => acc.movements);
-console.log(allMovements2);
+// // FLATMAP Method
+// const allMovements2 = accounts.flatMap(acc => acc.movements);
+// console.log(allMovements2);
 
-// const overalBalance2 = allMovements2.reduce((acc, mov) => acc + mov, 0);
+// // const overalBalance2 = allMovements2.reduce((acc, mov) => acc + mov, 0);
+// // console.log(overalBalance2);
+
+// const overalBalance2 = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((acc, mov) => acc + mov, 0);
 // console.log(overalBalance2);
-
-const overalBalance2 = accounts
-  .flatMap(acc => acc.movements)
-  .reduce((acc, mov) => acc + mov, 0);
-console.log(overalBalance2);
