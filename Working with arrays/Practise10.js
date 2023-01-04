@@ -507,20 +507,20 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 //   }
 // }
 
-// Equality
-console.log(movements);
-console.log(movements.includes(-130));
+// // Equality
+// console.log(movements);
+// console.log(movements.includes(-130));
 
-// Specifying Condition
-const anyDeposits = movements.some(mov => mov > 0);
-console.log(anyDeposits);
+// // Specifying Condition
+// const anyDeposits = movements.some(mov => mov > 0);
+// console.log(anyDeposits);
 
-// EVERY Method
-console.log(movements.every(mov => mov > 0));
-console.log(account4.movements.every(mov => mov > 0));
+// // EVERY Method
+// console.log(movements.every(mov => mov > 0));
+// console.log(account4.movements.every(mov => mov > 0));
 
-// Seperate Callback
-const deposit = mov => mov > 0;
-console.log(movements.some(deposit));
-console.log(movements.every(deposit));
-console.log(movements.filter(deposit));
+// // Seperate Callback
+// const deposit = mov => mov > 0;
+// console.log(movements.some(deposit));
+// console.log(movements.every(deposit));
+// console.log(movements.filter(deposit));
