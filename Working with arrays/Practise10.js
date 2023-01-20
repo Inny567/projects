@@ -598,3 +598,50 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 // // });
 // movements.sort((a, b) => b - a);
 // console.log(movements);
+
+// // More Ways of creating arrays
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(arr);
+
+// const z = new Array(1, 2, 3, 4, 5, 6, 7);
+// console.log(z);
+
+// // Empty Arrays + Fill Method
+// const x = new Array(7);
+// console.log(x);
+// // console.log(x.map(() => 5));
+// x.fill(1, 3, 5);
+// x.fill(1);
+// console.log(x);
+
+// arr.fill(23, 2, 6);
+// console.log(arr);
+
+// // Array.from
+// const y = Array.from({ length: 7 }, () => 1);
+// console.log(y);
+
+// const z1 = Array.from({ length: 7 }, (_, i) => i + 1);
+// console.log(z1);
+
+// const y1 = Array.from(
+//   { length: 100 },
+//   (_, i) => Math.trunc(Math.random() * 6) + 1
+// );
+// console.log(y1);
+
+// // const movementsUI = Array.from(document.querySelectorAll('.movements__value'));
+
+// // labelBalance.addEventListener('click', function () {
+// //   movementsUI;
+// //   console.log(movementsUI);
+// // });
+
+// labelBalance.addEventListener('click', function () {
+//   const movementsUI = Array.from(
+//     document.querySelectorAll('.movements__value'),
+//     el => Number(el.textContent.replace('€', ''))
+//   );
+
+//   console.log(movementsUI);
+// });
