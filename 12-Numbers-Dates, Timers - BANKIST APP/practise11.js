@@ -367,3 +367,34 @@ btnSort.addEventListener('click', function (e) {
 //     else row.style.backgroundColor = 'gray';
 //   });
 // });
+
+// // Working with 'BigInt'
+// console.log(2 ** 53 - 1);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(2 ** 53 + 1);
+// console.log(2 ** 53 + 2);
+// console.log(2 ** 53 + 3);
+// console.log(2 ** 53 + 4);
+
+// console.log(23799674560547685475867654346568756n);
+// console.log(BigInt(23799674560547685475867654346568756));
+// console.log(2378996745);
+
+// // Operations
+// console.log(10000n * 10000n);
+// console.log(36565267274786438385935648785834697n * 1000000n);
+
+// const huge = 165248353896875373658547935n;
+// const num = 23;
+// // console.log(huge * num);
+// console.log(huge * BigInt(num));
+
+// // Exceptions
+// console.log(20n > 15);
+// console.log(20n === 20);
+// console.log(typeof 20n);
+// console.log(20n == '20');
+
+// // Divisions
+// console.log(11n / 3n);
+// console.log(11 / 3);
