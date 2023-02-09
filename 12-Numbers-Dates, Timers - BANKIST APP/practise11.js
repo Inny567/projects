@@ -278,14 +278,16 @@ btnLoan.addEventListener('click', function (e) {
   const amount = Math.floor(inputLoanAmount.value);
 
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
-    // Add movement
-    currentAccount.movements.push(amount);
+    setTimeout(function () {
+      // Add movement
+      currentAccount.movements.push(amount);
 
-    // Add Loan Date
-    currentAccount.movementsDates.push(new Date().toISOString());
+      // Add Loan Date
+      currentAccount.movementsDates.push(new Date().toISOString());
 
-    // Update UI
-    updateUI(currentAccount);
+      // Update UI
+      updateUI(currentAccount);
+    }, 4000);
   }
   inputLoanAmount.value = '';
 });
@@ -537,3 +539,27 @@ btnSort.addEventListener('click', function (e) {
 //   navigator.language,
 //   new Intl.NumberFormat(navigator.language, options).format(num)
 // );
+
+// SET TIMEOUT
+// const ingredients = ['olives', 'spinach'];
+
+// const pizzaTimeout = setTimeout(
+//   (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2} 🍕`),
+//   3000,
+//   ...ingredients
+// );
+// console.log('Waiting ...');
+
+// if (ingredients.includes('spinach')) clearTimeout(pizzaTimeout);
+
+// // SETINTERVAL
+// setInterval(function () {
+//   const now = new Date();
+//   console.log(now);
+
+//   const hour = now.getHours();
+//   const min = now.getMinutes();
+//   const seconds = now.getSeconds();
+
+//   console.log(`${hour}:${min}:${seconds}`);
+// }, 1000);
