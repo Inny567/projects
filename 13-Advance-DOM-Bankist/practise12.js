@@ -33,78 +33,78 @@ document.addEventListener('keydown', function (e) {
 /////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
-// SELECTING ELEMENT
-console.log(document.documentElement);
-console.log(document.head);
-console.log(document.body);
+// // SELECTING ELEMENT
+// console.log(document.documentElement);
+// console.log(document.head);
+// console.log(document.body);
 
-const header = document.querySelector('.header');
-const allSections = document.querySelectorAll('.section');
-console.log(allSections);
+// const header = document.querySelector('.header');
+// const allSections = document.querySelectorAll('.section');
+// console.log(allSections);
 
-document.getElementById('section--1');
-const allButtons = document.getElementsByTagName('button');
-console.log(allButtons);
+// document.getElementById('section--1');
+// const allButtons = document.getElementsByTagName('button');
+// console.log(allButtons);
 
-console.log(document.getElementsByClassName('btn'));
+// console.log(document.getElementsByClassName('btn'));
 
-// CREATING and Insertng Elements
-const message = document.createElement('div');
-message.classList.add('cookie-message');
-message.innerHTML =
-  'We use cookied for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
-// header.prepend(message);
-header.append(message);
-// header.append(message.cloneNode(true));
+// // CREATING and Insertng Elements
+// const message = document.createElement('div');
+// message.classList.add('cookie-message');
+// message.innerHTML =
+//   'We use cookied for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
+// // header.prepend(message);
+// header.append(message);
+// // header.append(message.cloneNode(true));
 
-// Deleting Element
-document
-  .querySelector('.btn--close-cookie')
-  .addEventListener('click', function () {
-    // message.remove();
-    message.parentElement.removeChild(message);
-  });
+// // Deleting Element
+// document
+//   .querySelector('.btn--close-cookie')
+//   .addEventListener('click', function () {
+//     // message.remove();
+//     message.parentElement.removeChild(message);
+//   });
 
-// Styles, Attributes and Classes
-// Styles
-message.style.backgroundColor = '#37383d';
-message.style.width = '120%';
+// // Styles, Attributes and Classes
+// // Styles
+// message.style.backgroundColor = '#37383d';
+// message.style.width = '120%';
 
-console.log(message.style.color);
-console.log(message.style.backgroundColor);
+// console.log(message.style.color);
+// console.log(message.style.backgroundColor);
 
-console.log(getComputedStyle(message).color);
-console.log(getComputedStyle(message).height);
+// console.log(getComputedStyle(message).color);
+// console.log(getComputedStyle(message).height);
 
-message.style.height =
-  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+// message.style.height =
+//   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
 
-document.documentElement.style.setProperty('--color-primary', 'orangered');
-document.documentElement.style.setProperty('--color-primary-darker', 'red');
+// document.documentElement.style.setProperty('--color-primary', 'orangered');
+// document.documentElement.style.setProperty('--color-primary-darker', 'red');
 
-// ATTRIBUTES
-// standard attributes
-const logo = document.querySelector('.nav__logo');
-console.log(logo.alt);
+// // ATTRIBUTES
+// // standard attributes
+// const logo = document.querySelector('.nav__logo');
+// console.log(logo.alt);
 
-console.log(logo.className);
+// console.log(logo.className);
 
-// Non-standard attributes
-console.log(logo.designer);
-console.log(logo.getAttribute('designer'));
-logo.setAttribute('Company', 'Bankist');
+// // Non-standard attributes
+// console.log(logo.designer);
+// console.log(logo.getAttribute('designer'));
+// logo.setAttribute('Company', 'Bankist');
 
-console.log(logo.src);
-console.log(logo.getAttribute('src'));
+// console.log(logo.src);
+// console.log(logo.getAttribute('src'));
 
-// DATA Attributes
-console.log(logo.dataset.versionNumber);
+// // DATA Attributes
+// console.log(logo.dataset.versionNumber);
 
-// CLASSES
-logo.classList.add('c', 'j');
-logo.classList.remove('c', 'j');
-logo.classList.toggle('c');
-logo.classList.add('c');
+// // CLASSES
+// logo.classList.add('c', 'j');
+// logo.classList.remove('c', 'j');
+// logo.classList.toggle('c');
+// logo.classList.add('c');
 
-// Don't Use
-//logo.className = 'INNY';
+// // Don't Use
+// //logo.className = 'INNY';
