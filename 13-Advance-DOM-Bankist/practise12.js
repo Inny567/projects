@@ -64,3 +64,47 @@ document
     // message.remove();
     message.parentElement.removeChild(message);
   });
+
+// Styles, Attributes and Classes
+// Styles
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.color);
+console.log(message.style.backgroundColor);
+
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+document.documentElement.style.setProperty('--color-primary-darker', 'red');
+
+// ATTRIBUTES
+// standard attributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+
+console.log(logo.className);
+
+// Non-standard attributes
+console.log(logo.designer);
+console.log(logo.getAttribute('designer'));
+logo.setAttribute('Company', 'Bankist');
+
+console.log(logo.src);
+console.log(logo.getAttribute('src'));
+
+// DATA Attributes
+console.log(logo.dataset.versionNumber);
+
+// CLASSES
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.add('c');
+
+// Don't Use
+//logo.className = 'INNY';
