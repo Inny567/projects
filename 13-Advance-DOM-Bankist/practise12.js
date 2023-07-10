@@ -46,6 +46,7 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth
   );
+  
 
   // SCROLLING
   // window.scrollTo(
@@ -87,6 +88,23 @@ document.querySelector('.nav__link').addEventListener('click', function (e) {
   }
 });
 
+// TABBED COMPONENT
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+
+  console.log(clicked);
+
+  // GUARD CLAUSE
+  if (!clicked) return;
+
+  // ACTIVE TAB
+  tabs.forEach(t => t.classList.remove('.operations__tab--active'));
+  clicked.classList.add('.operations__tab--active');
+});
 /////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
